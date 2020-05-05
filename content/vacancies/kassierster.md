@@ -1,7 +1,8 @@
 ---
 title: "kassierster"
 date: "2019-01-10"
-description: "gezocht kassierster met veel motivatie"
+featuredImage: "../images/feature1.jpg"
+description: "Ben jij op zoek naar een toffe job als kassier/kassierster met een gevarieerd takenpakket?"
 ---
 
 # Verkoopster/kassierster (M/V)

@@ -11,8 +11,25 @@ module.exports = {
     author: "Henri De Bel",
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -20,6 +37,12 @@ module.exports = {
         path: `${__dirname}/content`, // the path to source from
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "image-src",
+        path: `${__dirname}/src`, // the path to source from
+      },
+    },
   ],
 }

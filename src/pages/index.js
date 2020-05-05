@@ -1,15 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
+
+//#region component
 import Layout from "../components/global/layout"
 import Landing from "../components/home/landing"
 import Features from "../components/home/features"
 import Team from "../components/home/team"
 import Spotlight from "../components/home/spotlight"
+//#endregion components
 
 import styles from "./styles/index.module.scss"
 
 export default function HomePage({ data }) {
-  console.log("data", data)
   const {
     markdownRemark: {
       frontmatter: {

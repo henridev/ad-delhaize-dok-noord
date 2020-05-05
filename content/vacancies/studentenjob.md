@@ -1,7 +1,8 @@
 ---
 title: "Studentenjob"
 date: "2019-01-10"
-description: "enthousiast student gezocht"
+featuredImage: "../images/feature1.jpg"
+description: "Voel jij je helemaal thuis in de rol van avontuurlijke pionier? Solliciteer direct en lanceer jouw splinternieuwe carrière."
 ---
 
 # Magzijnier (M/V)

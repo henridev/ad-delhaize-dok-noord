@@ -16,6 +16,14 @@ collections:
       - { name: path, label: Path }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: datetime }
+      - label: Featured Image
+        name: thumbnail
+        widget: image
+        hint: "Image size 1280x800 works best :)"
+        required: false
+        media_library:
+          config:
+            multiple: false
       - { name: body, label: Body, widget: markdown }
   - name: promotions
     label: Promotions

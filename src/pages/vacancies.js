@@ -1,15 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { vacanciesPage } from "../queries"
 import Vacancy from "../components/vacancies/vacany"
 import Layout from "../components/global/layout"
 import styles from "./styles/vacancies.module.scss"
 
 export default function Vacancies({ data }) {
-  console.log("data", data)
   return (
     <Layout>
       <div className={styles.wrapper}>
         <div className={styles.list}>
+          <h3 className={styles.title}>Alle vacatures</h3>
           {data.allMarkdownRemark.edges.map(({ node }) => {
             return (
               <Vacancy
@@ -17,7 +17,8 @@ export default function Vacancies({ data }) {
                 key={node.id}
                 title={node.frontmatter.title}
                 date={node.frontmatter.date}
-                content={node.frontmatter.description}
+                describe={node.frontmatter.description}
+                excerpt={node.excerpt}
               />
             )
           })}
@@ -28,29 +29,4 @@ export default function Vacancies({ data }) {
   )
 }
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/vacancies/*.md" } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          id
-          excerpt
-          headings {
-            value
-          }
-          frontmatter {
-            date
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
+export const query = vacanciesPage

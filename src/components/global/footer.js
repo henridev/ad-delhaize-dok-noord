@@ -48,9 +48,8 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.algemene}>
-            <span className={styles.name}>Algmene informatie</span>
-
-            <span>betaalmethoden</span>
+            <span className={styles.algemeentitle}>Algmene informatie</span>
+            <span className={styles.betaalmethode}>betaalmethoden</span>
             <br />
             <FaCcVisa />
             <FaCcMastercard />

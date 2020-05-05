@@ -1,17 +1,11 @@
-.list {
-  flex-direction: column;
-  text-align: left;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+@import "../../styles/colors.scss";
 
 .image {
   width: 50%;
   padding: 10px;
   border-radius: 20px;
   align-self: flex-start;
-  margin: 100px;
+  margin: 50px auto;
 }
 
 .wrapper {
@@ -20,6 +14,20 @@
   align-items: center;
   margin: 5%;
   flex-direction: column;
+  .list {
+    flex-direction: column;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 859px;
+    a {
+      color: $gray;
+    }
+  }
+  .title {
+    align-self: flex-start;
+    color: $pink;
+  }
 }
 
 @media (max-width: 700px) {

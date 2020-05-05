@@ -115,4 +115,22 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin: 20px;
+  .algemeentitle {
+    font-family: Avenir LT Std;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 20px;
+    line-height: 160%;
+    color: $pink;
+  }
+  .betaalmethode {
+    font-family: Avenir LT Std;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 160%;
+    color: #323232;
+    text-decoration: none;
+  }
 }
