@@ -38,3 +38,5 @@ description: "Voel jij je helemaal thuis in de rol van avontuurlijke pionier? So
 ## Aanbod
 
 Ontdek en ontwikkel jouw professionele vaardigheden binnen een performant team en een energieke omgeving. Voel en beleef je passie en wie weet, misschien is dit wel het begin van een geweldige carrière bij Delhaize !
+
+![](/assets/team.jpg)

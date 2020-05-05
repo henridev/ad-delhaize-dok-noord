@@ -17,16 +17,5 @@ export default function Banner({ styles }) {
         Heeft u een vraag of opmerking? Aarzel niet en neem contact met ons op
       </p>
     </div>
-    // <img
-    //   style={{
-    //     width: "100%",
-    //     height: "200px",
-    //     backgroundRepeat: "no-repeat",
-    //     backgroundSize: "cover",
-    //     borderRadius: "20px",
-    //   }}
-    //   src="/assets/images/svg/background.svg"
-    //   alt="store"
-    // />
   )
 }
