@@ -1,5 +1,5 @@
 import React from "react"
-import { promosPage } from "../queries"
+import { graphql } from "gatsby"
 import Promo from "../components/promos/promo"
 import Layout from "../components/global/layout"
 import styles from "./styles/vacancies.module.scss"
@@ -28,4 +28,29 @@ export default function Vacancies({ data }) {
   )
 }
 
-export const query = promosPage
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { glob: "**/promos/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          id
+          excerpt
+          headings {
+            value
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

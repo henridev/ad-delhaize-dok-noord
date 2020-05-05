@@ -2,16 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/global/layout"
 import styles from "./vacancy.module.scss"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 export default function Vacancy({ data }) {
   console.log("data", data)
 
   const post = data.markdownRemark
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout>
-      {featuredImgFluid && <Img fluid={featuredImgFluid} />}
+      {/* {featuredImgFluid && <Img fluid={featuredImgFluid} />} */}
       <div className={styles.container}>
         {/* <img src={``} alt="img"></img> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
@@ -26,13 +26,6 @@ export const query = graphql`
       html
       frontmatter {
         title
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

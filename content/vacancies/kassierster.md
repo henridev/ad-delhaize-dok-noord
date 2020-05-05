@@ -1,7 +1,6 @@
 ---
 title: "kassierster"
 date: "2019-01-10"
-featuredImage: "../images/feature1.jpg"
 description: "Ben jij op zoek naar een toffe job als kassier/kassierster met een gevarieerd takenpakket?"
 ---
 

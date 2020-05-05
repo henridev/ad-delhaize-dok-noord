@@ -5,7 +5,7 @@ backend:
 # publish_mode: editorial_workflow
 # These lines should *not* be indented
 media_folder: static/assets/images/uploads
-public_folder: /assets
+public_folder: /assets/images/uploads
 
 collections:
   - name: vacancies

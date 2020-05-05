@@ -1,5 +1,6 @@
 import React from "react"
-import { vacanciesPage } from "../queries"
+
+import { graphql } from "gatsby"
 import Vacancy from "../components/vacancies/vacany"
 import Layout from "../components/global/layout"
 import styles from "./styles/vacancies.module.scss"
@@ -29,4 +30,29 @@ export default function Vacancies({ data }) {
   )
 }
 
-export const query = vacanciesPage
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { glob: "**/vacancies/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          id
+          excerpt
+          headings {
+            value
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
