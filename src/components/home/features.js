@@ -1,6 +1,6 @@
 import React from "react"
 import Feature from "./features/feature"
-import styles from "../styles/features.module.scss"
+import styles from "../styles/home.module.scss"
 
 export default function features({
   title,
@@ -15,7 +15,7 @@ export default function features({
   feature4Text,
 }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.featureswrapper}>
       <div className={styles.heading}>
         <h2 className={styles.subtitle}>{title}</h2>
         <p className={styles.paragraph}>{subtitle}</p>

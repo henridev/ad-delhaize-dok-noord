@@ -15,7 +15,7 @@ export default function InfoSection({ styles }) {
         <h3 className={styles.infotitle}>Telefoon</h3>
         <p className={styles.flex}>
           <FaPhone className={styles.icons} />
-          <a href="tel:+62896706255135"> +62-896-7062-55135</a>
+          <a href="tel:+329 224 11 19"> +62-896-7062-55135</a>
         </p>
       </div>
       <div>

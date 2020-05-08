@@ -1,9 +1,9 @@
 import React from "react"
-import styles from "../../styles/feature.module.scss"
+import styles from "../../styles/home.module.scss"
 
 export default function Feature({ title, imgSrc, paragraph }) {
   return (
-    <div className={styles.item}>
+    <div className={styles.featureitem}>
       {/* <div className={styles.background}></div> */}
       <div
         style={{

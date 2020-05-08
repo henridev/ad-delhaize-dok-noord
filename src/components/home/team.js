@@ -1,9 +1,9 @@
 import React from "react"
-import styles from "../styles/team.module.scss"
+import styles from "../styles/home.module.scss"
 
 export default function Team() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.teamwrapper}>
       <img
         src={`/assets/images/svg/team.svg`}
         alt="team"
