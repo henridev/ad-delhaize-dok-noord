@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "../styles/socialbutton.module.scss"
-import { FaPhone, FaFacebook } from "react-Icons/fa"
+import { FaFacebook } from "react-icons/fa"
 
 export default function socialbutton({ socialnetwork }) {
   let url = null
