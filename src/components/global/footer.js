@@ -3,7 +3,7 @@ import styles from "../styles/footer.module.scss"
 import Button from "./button"
 import SocialButton from "./socialbutton"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { FaCcVisa, FaCcMastercard } from "react-icons/fa"
+// import { FaCcVisa, FaCcMastercard } from "react-icons/fa"
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
