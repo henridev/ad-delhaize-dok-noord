@@ -1,10 +1,31 @@
-const { createFilePath } = require("gatsby-source-filesystem")
 const path = require("path")
+const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.onCreateNode = handleNodeCreation
+exports.createPages = handlePageCreation
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+function handleNodeCreation({ node, getNode, actions }) {
+  switch (node.internal.type) {
+    case "MarkdownRemark":
+      console.log("FOUND MARKDOWN NODE")
+      fmImagesToRelative(node)
+      const { createNodeField } = actions
+      // creating path to use to reach the page
+      const slug = createFilePath({ node, getNode, basePath: "markdown" })
+      createNodeField({
+        node,
+        name: "slug",
+        value: slug,
+      })
+      break
+    case "SitePage":
+      console.log("FOUND SITEPAGE NODE")
+      break
+  }
+}
+
+async function handlePageCreation({ graphql, actions, reporter }) {
   const { createPage } = actions
   const response = await graphql(`
     {
@@ -20,7 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
-  console.log("object", JSON.stringify(response, null, 4))
+
   if (response.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
@@ -29,27 +50,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   response.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPages(node, createPage)
   })
-}
-
-function handleNodeCreation({ node, getNode, actions }) {
-  switch (node.internal.type) {
-    case "MarkdownRemark":
-      console.log("node creation for markdown")
-      fmImagesToRelative(node)
-      const { createNodeField } = actions
-      const slug = createFilePath({ node, getNode, basePath: "markdown" })
-      createNodeField({
-        node,
-        name: "slug",
-        value: slug,
-      })
-      break
-    case "SitePage":
-      console.log("node creation for site page")
-      break
-    default:
-      break
-  }
 }
 
 function createPages(node, createPage, resolve) {

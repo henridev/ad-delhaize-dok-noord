@@ -17,6 +17,20 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "contents",
+        path: `${__dirname}/content`, // the path to source from
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "image-src",
+        path: `${__dirname}/static/assets/images`, // the path to source from
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -28,20 +42,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "content-src",
-        path: `${__dirname}/content`, // the path to source from
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "image-src",
-        path: `${__dirname}/src`, // the path to source from
       },
     },
   ],

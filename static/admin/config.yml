@@ -9,14 +9,19 @@ public_folder: /assets/images/uploads
 
 collections:
   - name: vacancies
-    label: Vacancies
+    label: vacatures
     folder: content/vacancies
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: title, label: Title }
-      - { name: date, label: Date, widget: datetime }
-      - label: Featured Image
+      - {
+          name: path,
+          label: bestandnaam,
+          hint: "enkel invullen bij maken nieuwe vacature of aanpassen bestandnaam bestaande vacature",
+        }
+      - { name: title, label: titel }
+      - { name: date, label: datum, widget: datetime }
+      - { name: body, label: omschrijving, widget: markdown }
+      - label: afbeelding
         name: thumbnail
         widget: image
         hint: "Image size 1280x800 works best :)"
@@ -24,20 +29,30 @@ collections:
         media_library:
           config:
             multiple: false
-      - { name: body, label: Body, widget: markdown }
   - name: promotions
-    label: Promotions
+    label: promoties
     folder: content/promotions
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: title, label: Title }
-      - { name: date, label: Date, widget: datetime }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: path,
+          label: bestandnaam,
+          hint: "enkel invullen bij maken nieuwe vacature of aanpassen bestandnaam bestaande vacature",
+        }
+      - { name: title, label: titel }
+      - { name: date, label: datum, widget: datetime }
+      - label: afbeelding
+        name: thumbnail
+        widget: image
+        hint: "Image size 1280x800 works best :)"
+        required: false
+        media_library:
+          config:
+            multiple: false
   - name: "pages"
-    label: "Pages"
+    label: "tekst voorpagina"
     files:
-      - label: "Home Page"
+      - label: "voorpagina"
         name: "home"
         file: "content/pages/home.md"
         fields:
@@ -58,4 +73,3 @@ collections:
           - { label: spotlight 1 tekst, name: titleOneSpot, widget: string }
           - { label: spotlight 2 tekst, name: titleTwoSpot, widget: string }
           - { label: spotlight 3 tekst, name: titleThreeSpot, widget: string }
-  
