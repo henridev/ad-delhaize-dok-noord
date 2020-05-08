@@ -29,12 +29,12 @@ export default function InfoSection({ styles }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Facebook pagina
+            bezoek onze facebook pagina
           </a>
         </p>
         <p className={styles.flex}>
           <FaMailBulk className={styles.icons} />{" "}
-          <a href="mailto:bello.dok@gmail.com"> email:bello.dok@gmail.com</a>
+          <a href="mailto:bello.dok@gmail.com"> bello.dok@gmail.com</a>
         </p>
       </div>
     </div>

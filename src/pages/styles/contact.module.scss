@@ -25,6 +25,7 @@
   }
   .input,
   .textarea {
+    font-family: "Merriweather", sans-serif;
     padding: 1em;
     display: block;
     width: 428px;
@@ -106,7 +107,7 @@
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.04em;
-    color: #1f3f68;
+    // color: #1f3f68;
     opacity: 0.6;
   }
   .contactpic {
@@ -130,6 +131,9 @@
       text-decoration: none;
       margin-left: 5px;
       color: inherit;
+    }
+    &:hover {
+      color: $pink;
     }
   }
 }

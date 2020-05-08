@@ -58,13 +58,4 @@ collections:
           - { label: spotlight 1 tekst, name: titleOneSpot, widget: string }
           - { label: spotlight 2 tekst, name: titleTwoSpot, widget: string }
           - { label: spotlight 3 tekst, name: titleThreeSpot, widget: string }
-  # - label: "Producten"
-  #   name: "products"
-  #   widget: "list"
-  #   fields:
-  #     - { label: Prijs, name: prijs, widget: number }
-  #     - { label: Naam, name: name, widget: string, default: "broodje" }
-  #     - label: ingredienten
-  #       name: ingredients
-  #       widget: list
-  #       field: { label: Naam, name: name, widget: string }
+  
