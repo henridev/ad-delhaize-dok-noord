@@ -1,10 +1,8 @@
 ---
-date: 2019-01-10
 title: broodje van de maand
+date: 2019-01-10T00:00:00.000Z
 image: ""
 keywords: promotie
 path: broodjevandemaand
 ---
-
-
-![](/assets/20161101_08122111.jpg)
+![](/assets/images/uploads/spot2.jpg)

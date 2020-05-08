@@ -26,5 +26,5 @@ feature4Text: Aan onze toog kan je terecht voor allerhande heerlijk beleg en
   natuurlijk ook een gezellige babel.
 titleOneSpot: broodje van de maand
 titleTwoSpot: soep van de week
-titleThreeSpot: spotlight day
+titleThreeSpot: spotlight van de dag
 ---
