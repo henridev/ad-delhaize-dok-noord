@@ -3,7 +3,7 @@ const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.onCreateNode = handleNodeCreation
-exports.createPages = handlePageCreation
+exports.createPages = executePageCreation
 
 function handleNodeCreation({ node, getNode, actions }) {
   switch (node.internal.type) {
@@ -13,6 +13,7 @@ function handleNodeCreation({ node, getNode, actions }) {
       const { createNodeField } = actions
       // creating path to use to reach the page
       const slug = createFilePath({ node, getNode, basePath: "markdown" })
+      // provides us with url paths we can query later
       createNodeField({
         node,
         name: "slug",
@@ -25,7 +26,7 @@ function handleNodeCreation({ node, getNode, actions }) {
   }
 }
 
-async function handlePageCreation({ graphql, actions, reporter }) {
+async function executePageCreation({ graphql, actions, reporter }) {
   const { createPage } = actions
   const response = await graphql(`
     {
@@ -46,7 +47,6 @@ async function handlePageCreation({ graphql, actions, reporter }) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-
   response.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPages(node, createPage)
   })

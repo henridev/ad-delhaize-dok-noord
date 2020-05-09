@@ -1,6 +1,6 @@
 import React from "react"
 import Item from "./spotlight/item"
-import styles from "../styles/spotlight.module.scss"
+import styles from "../styles/home.module.scss"
 
 export default function Spotlight({
   titleOneSpot,
@@ -8,7 +8,7 @@ export default function Spotlight({
   titleThreeSpot,
 }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.spotlightwrapper}>
       <h2 className={styles.title}>Promoties en spotlight</h2>
       <div className={styles.promotions}>
         <div className={styles.slides}>

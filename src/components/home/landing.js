@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import styles from "../styles/landing.module.scss"
+import styles from "../styles/home.module.scss"
 import Button from "../global/button"
 import Openinghours from "./landing/openinghours"
 
@@ -17,7 +17,7 @@ export default function Landing({ title, subtitle }) {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.landingwrapper}>
       <div className={styles.left}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.paragraph}> {subtitle}</p>
